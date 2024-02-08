@@ -1,5 +1,5 @@
 import React from 'react'
-import { useQuestionsStore } from '../store/questionsStore';
+import { useQuestionsStore } from '../../store/questionsStore';
 const emojis = [
     {
         id: 0,
@@ -22,15 +22,24 @@ const emojis = [
 ];
 function FeebackConatiner({ questionId, qRating }) {
     const { activeIndex, questionsList, setActiveindex, updateQuestions } = useQuestionsStore();
+    const { rating } = questionsList[activeIndex];
+    const renderEmojis = (val, type) => {
+        const handleStyle=(emojiCase) => {
+            if(Boolean(rating)){
+                if(emojiCase === rating)
+                return 'tooltip-active';
+            }
+            return 'tooltip';
 
-    const renderEmojis = (val) => {
+        };
+
         switch (val) {
             case 1:
-                return <span key={val} className='emoji' >&#128077;</span>
+                return <p className="emoji-wrapper"><span key={val} className='emoji' >&#128077;</span><span className={handleStyle("Like")}>Like</span></p>
             case 0:
-                return <span key={val} className='emoji'>&#129300;</span>
+                return <p className="emoji-wrapper"><span key={val} className='emoji'>&#129300;</span><span className={handleStyle("Nuetral")}>Nuetral</span></p>
             case -1:
-                return <span key={val} className='emoji'>&#128078;</span>
+                return <p className="emoji-wrapper"><span key={val} className='emoji'>&#128078;</span><span className={handleStyle("Dislike")}>Dislike</span></p>
             default:
                 return null;
         }
@@ -38,10 +47,9 @@ function FeebackConatiner({ questionId, qRating }) {
     const handleEmojiClick = (val) => {
         updateQuestions(questionId, val.val);
         // setTimeout(() => {
-            setActiveindex(activeIndex + 1);
+        setActiveindex(activeIndex + 1);
         // }, 2000);
     }
-    const { rating } = questionsList[activeIndex];
     const handleActiveEmoji = (emojiVal) => {
         if (!!rating) {
             if (rating === emojiVal) {
@@ -62,7 +70,7 @@ function FeebackConatiner({ questionId, qRating }) {
             <ul className="emoji-list" >
                 {emojis.map((emoji) => {
                     return (
-                        <li style={{ textShadow: handleActiveEmoji(emoji.name) }} key={emoji.id} onClick={() => handleEmojiClick(emoji)}>{renderEmojis(emoji.val)}</li>
+                        <li style={{ textShadow: handleActiveEmoji(emoji.name) }} key={emoji.id} onClick={() => handleEmojiClick(emoji)}>{renderEmojis(emoji.val, emoji.name)}</li>
                     );
                 })}
             </ul>

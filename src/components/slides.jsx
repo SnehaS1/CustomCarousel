@@ -1,7 +1,7 @@
 import React from 'react'
-import FeebackConatiner from './feedback';
 import { useQuestionsStore } from '../store/questionsStore';
 import { httpHelper } from '../helper/httpContainer';
+import FeebackConatiner from './feedback/feedback';
 
 
 function SlideComponent() {
@@ -26,11 +26,10 @@ function SlideComponent() {
     const data = questionsList[activeIndex];
     const ratingProvided = !!data.rating;
     const handleSubmit = (e) => {
-        e.preventDefault()
-        const questionPart = questionsList.slice(0, -1);
-        questionPart.map((question) => {
-            delete question.backgroundColor;
-        });
+        e.preventDefault();
+        const questionCopy = [...questionsList];
+        const questionPart = questionCopy.slice(0, -1);
+
         postResponse(questionPart);
 
     }
@@ -38,7 +37,7 @@ function SlideComponent() {
         const renderEmojis = (val) => {
             switch (val) {
                 case "Like":
-                    return <span key={val} className='submit-emoji' >&#128077;</span>
+                    return <span key={val} className='submit-emoji'>&#128077;</span>
                 case "Nuetral":
                     return <span key={val} className='submit-emoji'>&#129300;</span>
                 case "Dislike":

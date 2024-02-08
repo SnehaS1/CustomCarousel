@@ -57,17 +57,6 @@
 	}
 }
 
-.emoji-container1 {
-	p {
-		color: red;
-		font-size: 200px;
-	}
-
-	p:hover {
-		text-shadow: 0 -0.5rem 1rem greenyellow, 0 0.5rem 1rem #999;
-	}
-}
-
 
 .selectors {
 	position: absolute;
@@ -172,6 +161,27 @@
 		background: rgba(251, 251, 251, 0.45);
 		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 		backdrop-filter: blur(17px);
+	}
+
+	.emoji-wrapper {
+		display: flex;
+		flex-direction: column;
+		position: 'relative';
+	}
+
+
+
+	.emoji-wrapper .tooltip {
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.emoji-wrapper:hover .tooltip,  .emoji-wrapper .tooltip-active{
+		visibility: visible;
+		opacity: 1;
+		font-weight: 700;
+		color: blanchedalmond;
 	}
 
 	.emoji {
