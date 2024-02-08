@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Custom Carousel with vertical sliding
+A custom component for react carousel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive polling system to retrieve the feedback 
 
-## Available Scripts
+## Front-end
+- React
+- Zustand for state management
 
-In the project directory, you can run:
+## Backend
+- json-server
 
-### `npm start`
+## Instalation
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Running App
+npm run server
+nm run start
+  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The following functionality is available:
+- Each slide contains question with a set of emoji describing the response.
+- On hover of each emoji; this would be highlighted with the tooltip
+- On selecting the emoji the slide would move to next slide and on coming back to the slide where feedback was provided the selected emoji would be highlighted with the tooltip already focused
+- The last slide contains the list of all questions with feedback if provided
+- The submit would be enabled only when minimum one question has feedback
+- on Submit the response would be submitted to mock db through mock API which can be viewwed http://localhost:5050/feedback
+- On change of each slide the background color would change with animation
 
-### `npm test`
+  
+<img width="1512" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/3e873ca8-242e-4670-9641-66ea2cd80362">
+<img width="1510" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/78bfec9c-8b6c-4635-b548-1cb41f116da8">
+<img width="1510" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/f39b6669-3838-4edf-86c7-b46a93690225">
+<img width="1511" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/37d72e7d-09ea-4923-82f3-ea31c60e4cdb">
+<img width="1505" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/679421ab-b58e-4a34-b168-d7f69edc7c70">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
