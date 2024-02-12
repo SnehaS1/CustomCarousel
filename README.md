@@ -27,7 +27,7 @@ nm run start
 - on Submit the response would be submitted to mock db through mock API which can be viewwed http://localhost:5050/feedback
 - On change of each slide the background color would change with animation
 
-  
+<img width="1502" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/c96d9f2f-2722-4a16-8f9b-787e501b3682">
 <img width="1512" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/3e873ca8-242e-4670-9641-66ea2cd80362">
 <img width="1510" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/78bfec9c-8b6c-4635-b548-1cb41f116da8">
 <img width="1510" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/f39b6669-3838-4edf-86c7-b46a93690225">
