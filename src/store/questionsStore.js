@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 const questionsList = [{
   id: 0,
-  questions: 'How likely are you to recommend us to friends, family, or colleagues?',
+  questions: 'How was your overall week ?',
   rating: null,
   backgroundColor: '#BFB2F3'
 }, {
@@ -31,12 +31,6 @@ const questionsList = [{
   ratings: [],
   backgroundColor: '#ff80bf'
 }];
-// const useStore = create((set) => ({
-//   questionsList: questionsList,
-//   updateRating: () => set((state) => )
-//   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-//   removeAllBears: () => set({ bears: 0 }),
-// }))
 
 const handleFeedback = (val) => {
   switch (val) {

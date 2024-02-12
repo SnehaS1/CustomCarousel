@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide Navigator component renders matches snapshot 1`] = `
+<DocumentFragment>
+  <aside
+    class="panel"
+    role="slide-panel"
+  >
+    <section
+      class="slide-container"
+      id="question-container"
+    >
+      <h2
+        class="panel-question"
+        style="animation: animation: 2s anim-lineUp ease-out 1;"
+      >
+        How was your overall week ?
+      </h2>
+    </section>
+    <section
+      class="slide-container"
+      id="emoji-container"
+      style="background-color: white;"
+    >
+      <section>
+        <ul
+          class="emoji-list"
+          role="feedback-section"
+        >
+          <li
+            data-testid="emoji-list-li"
+            role="emoji"
+          >
+            <p
+              class="emoji-wrapper"
+              data-testid="emoji-wrapper"
+            >
+              <span
+                class="emoji"
+              >
+                👍
+              </span>
+              <span
+                class="tooltip"
+                data-testid="emoji-tooltip"
+              >
+                Like
+              </span>
+            </p>
+          </li>
+          <li
+            data-testid="emoji-list-li"
+            role="emoji"
+          >
+            <p
+              class="emoji-wrapper"
+              data-testid="emoji-wrapper"
+            >
+              <span
+                class="emoji"
+              >
+                🤔
+              </span>
+              <span
+                class="tooltip"
+                data-testid="emoji-tooltip"
+              >
+                Nuetral
+              </span>
+            </p>
+          </li>
+          <li
+            data-testid="emoji-list-li"
+            role="emoji"
+          >
+            <p
+              class="emoji-wrapper"
+              data-testid="emoji-wrapper"
+            >
+              <span
+                class="emoji"
+              >
+                👎
+              </span>
+              <span
+                class="tooltip"
+                data-testid="emoji-tooltip"
+              >
+                Dislike
+              </span>
+            </p>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </aside>
+</DocumentFragment>
+`;

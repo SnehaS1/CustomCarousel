@@ -20,14 +20,14 @@ const emojis = [
         unicode: '&#128078;',
     },
 ];
-function FeebackConatiner({ questionId, qRating }) {
+function FeebackConatiner({ questionId }) {
     const { activeIndex, questionsList, setActiveindex, updateQuestions } = useQuestionsStore();
     const { rating } = questionsList[activeIndex];
-    const renderEmojis = (val, type) => {
-        const handleStyle=(emojiCase) => {
-            if(Boolean(rating)){
-                if(emojiCase === rating)
-                return 'tooltip-active';
+    const renderEmojis = (val) => {
+        const handleStyle = (emojiCase) => {
+            if (Boolean(rating)) {
+                if (emojiCase === rating)
+                    return 'tooltip-active';
             }
             return 'tooltip';
 
@@ -35,11 +35,11 @@ function FeebackConatiner({ questionId, qRating }) {
 
         switch (val) {
             case 1:
-                return <p className="emoji-wrapper"><span key={val} className='emoji' >&#128077;</span><span className={handleStyle("Like")}>Like</span></p>
+                return <p key={val} className="emoji-wrapper" data-testid ="emoji-wrapper"><span className='emoji' >&#128077;</span><span className={handleStyle("Like")} data-testid ="emoji-tooltip">Like</span></p>
             case 0:
-                return <p className="emoji-wrapper"><span key={val} className='emoji'>&#129300;</span><span className={handleStyle("Nuetral")}>Nuetral</span></p>
+                return <p key={val} className="emoji-wrapper" data-testid="emoji-wrapper"><span className='emoji'>&#129300;</span><span className={handleStyle("Nuetral")} data-testid ="emoji-tooltip">Nuetral</span></p>
             case -1:
-                return <p className="emoji-wrapper"><span key={val} className='emoji'>&#128078;</span><span className={handleStyle("Dislike")}>Dislike</span></p>
+                return <p key={val} className="emoji-wrapper" data-testid="emoji-wrapper"><span className='emoji'>&#128078;</span><span className={handleStyle("Dislike")} data-testid ="emoji-tooltip">Dislike</span></p>
             default:
                 return null;
         }
@@ -66,11 +66,11 @@ function FeebackConatiner({ questionId, qRating }) {
         }
     }
     return (
-        <section >
-            <ul className="emoji-list" >
+        <section  >
+            <ul className="emoji-list" role="feedback-section">
                 {emojis.map((emoji) => {
                     return (
-                        <li style={{ textShadow: handleActiveEmoji(emoji.name) }} key={emoji.id} onClick={() => handleEmojiClick(emoji)}>{renderEmojis(emoji.val, emoji.name)}</li>
+                        <li data-testid="emoji-list-li" role="emoji" style={{ textShadow: handleActiveEmoji(emoji.name) }} key={emoji.id} onClick={() => handleEmojiClick(emoji)}>{renderEmojis(emoji.val, emoji.name)}</li>
                     );
                 })}
             </ul>

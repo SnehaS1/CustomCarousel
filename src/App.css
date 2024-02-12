@@ -27,9 +27,8 @@
 .selectors {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 5px;
 	width: 30px;
-	background: rgba(0, 0, 0, 0.1);
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -39,18 +38,17 @@
 
 	.selector {
 		border: 1px solid white;
-		background: none;
-		width: 11px;
-		height: 11px;
+		background: white;
+		width: 15px;
+		height: 15px;
 		border-radius: 50%;
 		margin: 5px 0;
 		opacity: 0.6;
 		cursor: pointer;
 		transition: background .3s ease-in-out, opacity .3s ease-in-out;
-
 		&:hover,
 		&.active {
-			background: white;
+			background: none;
 			opacity: 0.9;
 		}
 	}
@@ -98,6 +96,9 @@
 	h2.panel-question {
 		margin: 0;
 		padding: 1.3rem 3.5rem;
+		color: white;
+		font-size: 4em;
+		font-family: 600;
 	}
 
 	.panel-question {
@@ -105,7 +106,7 @@
 	}
 
 	.panel-answered-question {
-		font-size: 2em;
+		font-size: 5em;
 		color: white;
 		font-style: oblique;
 		text-shadow: 0 -0.5rem 1rem #999, 0 0.5rem 1rem #999;
@@ -148,7 +149,6 @@
 		visibility: visible;
 		opacity: 1;
 		font-weight: 700;
-		color: blanchedalmond;
 	}
 
 	.emoji {

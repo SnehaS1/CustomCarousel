@@ -1,7 +1,7 @@
 import React from 'react'
-import { useQuestionsStore } from '../store/questionsStore';
-import { httpHelper } from '../helper/httpContainer';
-import FeebackConatiner from './feedback/feedback';
+import { useQuestionsStore } from '../../store/questionsStore';
+import { httpHelper } from '../../helper/httpContainer';
+import FeebackConatiner from '../feedback/feedback';
 
 
 function SlideComponent() {
@@ -46,7 +46,7 @@ function SlideComponent() {
         }
         let questionPart = questionsList.slice(0, -1).find(o => !!o.rating);
         return (
-            <aside className="panel panel-grid" style={{ background: 'rgba( 255, 255, 255, 0.45 )', boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', backdropFilter: 'blur( 16px )' }}>
+            <aside role="question-feedback" className="panel panel-grid" style={{ background: 'rgba( 255, 255, 255, 0.45 )', boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )', backdropFilter: 'blur( 16px )' }}>
                 <table>
                     <thead>
                         <tr>
@@ -67,17 +67,17 @@ function SlideComponent() {
                         })}
                     </tbody>
                 </table>
-                {!Boolean(questionPart) && <p>Provide feedback to proceed</p>}
+                {!Boolean(questionPart) && <p data-testid="hide-feedback">Provide feedback to proceed</p>}
                 <button type="submit" onClick={handleSubmit} disabled={!Boolean(questionPart)}>Submit Response</button>
             </aside>
         );
     }
     return (
-        <aside className="panel">
+        <aside role="slide-panel"className="panel">
             <section className='slide-container' id='question-container'>
                 <h2 className={ratingProvided ? "panel-answered-question" : "panel-question"} style={{ animation: 'animation: 2s anim-lineUp ease-out 1' }}>{data.questions}</h2>
             </section>
-            <section className='slide-container' id='emoji-container'>
+            <section className='slide-container' style={{ backgroundColor: 'white'}} id='emoji-container'>
                 {activeIndex < questionsList.length - 1 &&
                     <FeebackConatiner questionId={data.id} />}
             </section>
