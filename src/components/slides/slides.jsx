@@ -68,7 +68,7 @@ function SlideComponent() {
                     </tbody>
                 </table>
                 {!Boolean(questionPart) && <p data-testid="hide-feedback">Provide feedback to proceed</p>}
-                <button type="submit" onClick={handleSubmit} disabled={!Boolean(questionPart)}>Submit Response</button>
+                <button  className = {Boolean(questionPart) ? 'active-btn': 'disabled-btn'}type="submit" onClick={handleSubmit} disabled={!Boolean(questionPart)}>Submit Response</button>
             </aside>
         );
     }
