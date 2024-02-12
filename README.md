@@ -28,8 +28,7 @@ nm run start
 - On change of each slide the background color would change with animation
 
 <img width="1502" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/c96d9f2f-2722-4a16-8f9b-787e501b3682">
-<img width="1512" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/3e873ca8-242e-4670-9641-66ea2cd80362">
-<img width="1510" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/78bfec9c-8b6c-4635-b548-1cb41f116da8">
+<img width="1509" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/3daa8bfa-1c0c-42b4-a742-90dfe8ceccf5">
 <img width="1512" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/64408e64-2e81-4c09-969e-29345596b334">
 
 <img width="1505" alt="image" src="https://github.com/SnehaS1/CustomCarousel/assets/18303528/679421ab-b58e-4a34-b168-d7f69edc7c70">
